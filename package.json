@@ -1,6 +1,6 @@
 {
   "name": "aws-s3-upload",
-  "version": "1.0.0",
+  "version": "1git commit -m "first commit".0.0",
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www"

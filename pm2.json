@@ -1,0 +1,12 @@
+{
+    "apps": [{
+        "name": "aws-s3-upload",
+        "script": "./bin/www",
+        "watch": true,
+        "ignore_watch" : ["node_modules", "public/images"],
+        "watch_options": {
+        "followSymlinks": false
+        },
+        "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }]
+}
