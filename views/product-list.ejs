@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title><%= title%></title>
+    <!-- HEAD CODE-->
+    <%- include('head'); %>
+
+  </head>
+  <!-- Body-->
+  <body>
+
+    <!-- Template Customizer-->
+    <!-- %- include('template-customizer'); %> -->
+
+    <!-- Shop Filters Modal-->
+
+    <!-- Off-Canvas Category Menu-->
+    <%- include('canvas-category-menu'); %>
+
+    <!-- Off-Canvas Mobile Menu-->
+    <%- include('canvas-mobile-menu'); %>
+
+    <!-- Topbar -->
+    <%- include('topbar'); %>
+
+    <!-- Navbar -->
+    <%- include('navbar'); %>
+    
+    <!-- Off-Canvas Wrapper-->
+    <div class="offcanvas-wrapper">
+      <!-- Page Title-->
+      <div class="page-title">
+        <div class="container">
+          <div class="column">
+            <h1>Listado de Productos</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page Content-->
+      <div class="container padding-bottom-3x mb-1">
+        <div class="row">
+
+          <!-- Products-->
+          <div class="col-xl-12 col-lg-11 order-lg-5">
+            <!-- Product-->
+            <% for(let i = 0; i < registros.length; i++) {%>
+              <div class="product-card product-list"><a class="product-thumb" href="#"><img src="<%=registros[i].path%>" alt="Product"></a>
+                <div class="product-info">
+                  <h3 class="product-title"><a href="#"><%=registros[i].name%></a></h3>
+                  <h4 class="product-price">S/. <%=registros[i].price%></h4>
+                  <p class="hidden-xs-down"><%=registros[i].description%></p>
+                  <!-- <div class="product-buttons">
+                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="feather-icon icon-heart"></i></button>
+                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                  </div> -->
+                </div>
+              </div>
+            <% } %>
+            <!-- Product-->
+              <!-- <div class="product-card product-list"><a class="product-thumb" href="shop-single.html">
+                    <div class="rating-stars"><i class="feather-icon icon-star filled"></i><i class="feather-icon icon-star filled"></i><i class="feather-icon icon-star filled"></i><i class="feather-icon icon-star filled"></i><i class="feather-icon icon-star"></i>
+                    </div><img src="img/shop/products/03.jpg" alt="Product"></a>
+                <div class="product-info">
+                  <h3 class="product-title"><a href="shop-single.html">Oakley Kickback</a></h3>
+                  <h4 class="product-price">$155.00</h4>
+                  <p class="hidden-xs-down">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore odit officiis illo perferendis deserunt, ipsam dolor ad dolorem eaque veritatis harum facilis aliquid id doloribus incidunt quam beatae, soluta magni alori sedum quanto.</p>
+                  <div class="product-buttons">
+                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="feather-icon icon-heart"></i></button>
+                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                  </div>
+                </div>
+              </div> -->
+            <!-- Product-->
+            <!-- <div class="product-card product-list"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/04.jpg" alt="Product"></a>
+              <div class="product-info">
+                <h3 class="product-title"><a href="shop-single.html">Waist Leather Belt</a></h3>
+                <h4 class="product-price">$47.00</h4>
+                <p class="hidden-xs-down">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore odit officiis illo perferendis deserunt, ipsam dolor ad dolorem eaque veritatis harum facilis aliquid id doloribus incidunt quam beatae, soluta magni alori sedum quanto.</p>
+                <div class="product-buttons">
+                  <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="feather-icon icon-heart"></i></button>
+                  <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+
+      <!-- Site Footer-->
+      <%- include('footer'); %>
+
+    </div>
+
+    <!-- Back To Top Button-->
+    <a class="scroll-to-top-btn" href="#"><i class="feather-icon icon-arrow-up"></i></a>
+    <!-- Backdrop-->
+    <div class="site-backdrop"></div>
+    <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <!-- Customizer scripts-->
+    <!-- <script src="customizer/customizer.min.js"></script> -->
+    <script>
+      // let a = <%=registros.length %>;
+      // console.log(a);
+    </script>
+  </body>
+
+</html>
